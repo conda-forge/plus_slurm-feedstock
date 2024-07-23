@@ -9,6 +9,8 @@ Package license: GPL-3.0-or-later
 
 Summary: Convenient Python Abstraction for the Slurm based cluster at the PLUS
 
+Documentation: https://plus-slurm.readthedocs.io/
+
 Current build status
 ====================
 
