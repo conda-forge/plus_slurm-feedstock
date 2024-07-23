@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -42,6 +42,7 @@ about:
   license: GPL-3.0-or-later
   license_file: LICENSE
   home: https://gitlab.com/thht/plus-slurm/
+  doc_url: https://plus-slurm.readthedocs.io/
 
 extra:
   recipe-maintainers:
