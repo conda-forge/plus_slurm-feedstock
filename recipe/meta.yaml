@@ -1,5 +1,5 @@
 {% set name = "plus_slurm" %}
-{% set version = "0.2.7" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plus_slurm-{{ version }}.tar.gz
-  sha256: 54de87d167a299983f745eaf9195960d0eae674341f5f8dd3a169fc593e67e3b
+  sha256: 8ab666ba5e2ab2a6180af9184dcef64a1762768276be8e569a9adf32e6f39daa
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
