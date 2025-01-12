@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plus_slurm-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plus_slurm-{{ version }}.tar.gz
   sha256: f68ae230483e81b0f1f69c71fa6379bda0ad436cda2a8f095860ce667e729a37
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - hatchling
     - hatch-regex-commit
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - jinja2
     - future
     - humanfriendly
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Convenient Python Abstraction for the Slurm based cluster at the PLUS
